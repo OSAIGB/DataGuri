@@ -1,6 +1,6 @@
 import React from "react";
 
-const catchDisplay = () =>{
+const catchDisplay: React.FC = () =>{
   return(
     <div>
         <h3 className="cheap">Get cheap Data and Airtime anywhere, anytime.</h3>

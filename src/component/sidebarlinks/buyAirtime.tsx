@@ -1,17 +1,46 @@
-// @flow
-import * as React from 'react';
-type Props = {
+import React, {useState} from 'react'
+
+const [network, setNetwork] = useState<string>('');
+const [phoneNumber, setPhoneNumber] = useState<string>('');
+const [amount, setAmount] = useState<string>('');
+
+const BuyAirtime: React.FC = ()  =>{
   
-};
-type State = {
-  
-};
-export class buyAirtime extends React.Component<Props, State>{
-  render() {
-    return (
+  return (
+    <form>
       <div>
-        
+        <label>
+          Network:
+          <input
+            type="text"
+            value={network}
+            onChange={(e) => setNetwork(e.target.value)}
+          />
+        </label>
       </div>
-    );
-  };
+      <div>
+        <label>
+          Phone Number:
+          <input
+            type="text"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Amount:
+          <input
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </label>
+      </div>
+      <button type="submit">Purchase</button>
+    </form>
+  );
 };
+
+export default BuyAirtime
