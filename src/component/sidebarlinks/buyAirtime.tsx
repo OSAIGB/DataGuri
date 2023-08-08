@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 
-const [network, setNetwork] = useState<string>('');
+
+const BuyAirtime: React.FC = ()  =>{
+  const [network, setNetwork] = useState<string>('');
 const [phoneNumber, setPhoneNumber] = useState<string>('');
 const [amount, setAmount] = useState<string>('');
 
-const BuyAirtime: React.FC = ()  =>{
-  
   return (
     <form>
       <div>

@@ -5,7 +5,13 @@ import SignInPage from './signInPg';
 import HomePage from './homePage';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Account from './component/sidebarlinks/account';
+import BuyAirtime from './component/sidebarlinks/buyAirtime';
+import BuyData from './component/sidebarlinks/buyData';
+import DataEpin from './component/sidebarlinks/dataEpin';
+import EducationPin from './component/sidebarlinks/educationPin';
+import FundWallet from './component/sidebarlinks/fundWallet';
+import PayCableSub from './component/sidebarlinks/payCableSub';
 
 
 const App: React.FC = () => {
@@ -61,6 +67,13 @@ const App: React.FC = () => {
         />
         <Route path="/login" element={<LoginPage logIn={logIn} />} />
         <Route path="/signup" element={<SignInPage />} />
+        <Route path="/account" element= {<Account/>}/>
+        <Route path= '/buyAirtime' element= {<BuyAirtime />}/>
+        <Route path = '/buyData' element= {<BuyData/>} />
+        <Route path= '/dataEpin' element = {<DataEpin/>}/>
+        <Route path = '/educationPin' element = {<EducationPin/>}/>
+        <Route path= '/fundWallet' element ={<FundWallet/>} />
+        <Route path = '/buyCable' element = {<PayCableSub />} />
       </Routes>
     </Router>
   );

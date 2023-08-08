@@ -7,6 +7,8 @@ const Account = () =>{
   const [phoneNumber, setPhoneNumber] = useState('');
   const [amount, setAmount] = useState('');
     return (
+      
+
       <form >
         <div>
           <label>
@@ -60,6 +62,7 @@ const Account = () =>{
         </div>
         <button type="submit">Purchase</button>
       </form>
-  
+      
   )
 }
+export default Account

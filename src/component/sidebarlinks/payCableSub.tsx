@@ -6,7 +6,7 @@ interface FormData {
   iucAmount: number;
 }
 
-const CablePurchaseForm: React.FC = () => {
+const PayCableSub: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     cableType: '',
     cablePlan: '',
@@ -16,9 +16,8 @@ const CablePurchaseForm: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Perform purchase logic here (e.g., send form data to a backend server)
 
-    // Reset form fields after submission
+    
     setFormData({
       cableType: '',
       cablePlan: '',
@@ -74,4 +73,4 @@ const CablePurchaseForm: React.FC = () => {
   );
 };
 
-export default CablePurchaseForm;
+export default PayCableSub;

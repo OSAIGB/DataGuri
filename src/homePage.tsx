@@ -10,6 +10,7 @@ import CatchDisplay from './component/catchDisplay'
 import QuickAccess from "./component/quickAccess";
 import Transactions from "./component/transactions";
 import Chat from "./component/chat";
+import { BrowserRouter } from "react-router-dom";
 // Define the prop type for the HomePage component
 interface onLogout {
   onLogout: () => void;
@@ -39,6 +40,7 @@ interface Wallet {
 interface sidBarTypes {
   bars: string
   icon: any
+  links: string
 }
 
 // Define the HomePage component with the provided onLogout prop
@@ -91,55 +93,69 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
   const sidbarArrays: sidBarTypes[] = [
     {
       bars: 'Dashboard',
-      icon: faHome
+      icon: faHome,
+      links: '/'
     },
     {
       bars: 'BuyData',
-      icon: faWifi
+      icon: faWifi,
+      links: '/buyData'
+
     },
     {
       bars: 'Buy Airtime',
-      icon: faPhone
+      icon: faPhone,
+      links: '/buyAirtime'
     },
     {
       bars: 'Pay Cable Sub',
-      icon: faTv
+      icon: faTv,
+      links: '/buyCable'
     },
     {
       bars: 'Pay Electricity Bill',
-      icon: faBolt
+      icon: faBolt,
+      links: '/payElect'
     },
     {
       bars: 'Education Pin',
-      icon: faSchool
+      icon: faSchool,
+      links: '/educationPin'
     },
     {
       bars: 'Data E-Pin',
-      icon: faIdCard
+      icon: faIdCard,
+      links: '/dataEpin'
     },
     {
       bars: 'Airtime E-Pin',
-      icon: faIdCard
+      icon: faIdCard,
+      links: '/airtimeEpin'
     },
     {
       bars: 'Fund Wallet',
-      icon: faWallet
+      icon: faWallet,
+      links: '/fundWallet'
     },
     {
       bars: 'Price List',
-      icon: faTag
+      icon: faTag,
+      links: '/priceList'
     },
     {
       bars: 'Transaction',
-      icon: faRefresh
+      icon: faRefresh,
+      links: '/transaction'
     },
     {
       bars: 'Account',
-      icon: faUser
+      icon: faUser,
+      links: '/account'
     },
     {
       bars: 'Developer API',
-      icon: faCode
+      icon: faCode,
+      links: '/developerApi'
     }
   ];
   return (

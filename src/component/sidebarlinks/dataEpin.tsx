@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PurchaseForm: React.FC = () => {
+const DataEpin: React.FC = () => {
   const [network, setNetwork] = useState<string>('MTN');
   const [plan, setPlan] = useState<string>('');
   const [name, setName] = useState<string>('');
@@ -65,4 +65,4 @@ const PurchaseForm: React.FC = () => {
   );
 };
 
-export default PurchaseForm;
+export default DataEpin;
