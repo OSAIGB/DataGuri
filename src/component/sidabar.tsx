@@ -19,7 +19,7 @@ const SideBar: React.FC<sideBarProps> = ({sideBarIcon}) =>{
    
     <div className="sideBar">
     <div>
-<Link to={sideBarIcon.links} target="_blank" rel="noopener noreferrer">
+<Link to={sideBarIcon.links} rel="noopener noreferrer">
   {sideBarIcon.bars}
      <FontAwesomeIcon icon={sideBarIcon.icon}/>
      </Link>

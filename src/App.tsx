@@ -12,6 +12,9 @@ import DataEpin from './component/sidebarlinks/dataEpin';
 import EducationPin from './component/sidebarlinks/educationPin';
 import FundWallet from './component/sidebarlinks/fundWallet';
 import PayCableSub from './component/sidebarlinks/payCableSub';
+import ElectricityBill from './component/sidebarlinks/payElectricityBill';
+import PriceList from './component/sidebarlinks/PriceList';
+import Transactions from './component/sidebarlinks/transaction';
 
 
 const App: React.FC = () => {
@@ -74,6 +77,11 @@ const App: React.FC = () => {
         <Route path = '/educationPin' element = {<EducationPin/>}/>
         <Route path= '/fundWallet' element ={<FundWallet/>} />
         <Route path = '/buyCable' element = {<PayCableSub />} />
+        <Route path = '/payElect' element={<ElectricityBill />} />
+        <Route path = '/airtimeEpin' element ={<BuyAirtime />}/>
+        <Route path = '/priceList' element = {<PriceList/>}/>
+        <Route path = '/transaction' element={<Transactions/>}/>
+        
       </Routes>
     </Router>
   );
