@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,8 +46,6 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
 
     <div className='login'>
         <div>
-            <FontAwesomeIcon icon={faHome} />
-           DataGuri 
             <h1>
                Top up your Phone's airtime, get affordable data, 
                pay electricity bills, renew TV subscriptions etc...
@@ -77,7 +75,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
         <button type='submit'>Login</button>
     </form>
     <p>
-        Don't have an account? <Link to='/signup'>Sign up here</Link>
+        Don't have an account? <NavLink to='/signup'>Sign up here</NavLink>
     </p>
     
     </div>

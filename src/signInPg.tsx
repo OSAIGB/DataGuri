@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const signUp : React.FC = () =>{
   return (
@@ -68,7 +68,7 @@ const signUp : React.FC = () =>{
         </label>
         <button type='submit'>Register</button>
     </form>
-    <p>Already have an account? Login <Link to={'/'}>here</Link></p>
+    <p>Already have an account? Login <NavLink to={'/'}>here</NavLink></p>
     <p>
       
     </p>

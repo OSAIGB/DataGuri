@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import { createBrowserRouter, Routes, Route, useNavigate, Navigate, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import LoginPage from './loginPg';
 import SignInPage from './signInPg';
 import HomePage from './homePage';
@@ -13,15 +13,23 @@ import EducationPin from './component/sidebarlinks/educationPin';
 import FundWallet from './component/sidebarlinks/fundWallet';
 import PayCableSub from './component/sidebarlinks/payCableSub';
 import ElectricityBill from './component/sidebarlinks/payElectricityBill';
-import PriceList from './component/sidebarlinks/PriceList';
+import PriceList from './layouts/PriceList';
 import Transactions from './component/sidebarlinks/transaction';
+import AirtelPriceList from './component/sidebarlinks/priceLists/airtelPrice';
+import GloPriceList from './component/sidebarlinks/priceLists/GloPrice';
+import NineMobilePriceList from './component/sidebarlinks/priceLists/nineMobile';
+import Layout from './layouts/layout';
+import CablePriceList from './component/sidebarlinks/priceLists/cableList';
+import ElectricityPriceList from './component/sidebarlinks/priceLists/electricityPrice';
+import EducationPriceList from './component/sidebarlinks/priceLists/educationPrice';
+import MTNPriceList from './component/sidebarlinks/priceLists/mtnprices';
+import NotFound from './NotFoundPage';
 
 
 const App: React.FC = () => {
   const [myAppIsLoggedIn, setMyAppIsLoggedIn] = useState<boolean>(false);
   console.log(myAppIsLoggedIn);
-
-
+  
 
   // Check login status on app start
   const checkLoginStatus = () => {
@@ -60,30 +68,45 @@ const App: React.FC = () => {
     localStorage.setItem('myAppIsLoggedIn', JSON.stringify(myAppIsLoggedIn));
   }, [myAppIsLoggedIn]);
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+  
+    <Route path="/" element={<Layout />}>
+      <Route
+        index
+        element={myAppIsLoggedIn ? <HomePage onLogout={handleLogout} /> : <Navigate to="/login" />}
+      />
+      <Route path="account" element={<Account />} />
+      <Route path="buyAirtime" element={<BuyAirtime />} />
+      <Route path="buyData" element={<BuyData />} />
+      <Route path="dataEpin" element={<DataEpin />} />
+      <Route path="educationPin" element={<EducationPin />} />
+      <Route path="fundWallet" element={<FundWallet />} />
+      <Route path="buyCable" element={<PayCableSub />} />
+      <Route path="payElect" element={<ElectricityBill />} />
+      <Route path="airtimeEpin" element={<BuyAirtime />} />
+      <Route path="priceList" element={<PriceList />}>
+        <Route path="airtelPricelist" element={<AirtelPriceList />} />
+        <Route path="glopricelist" element={<GloPriceList />} />
+        <Route path="9mobilepricelist" element={<NineMobilePriceList />} />
+        <Route path = 'cablepricelist' element = {<CablePriceList/>} />
+        <Route path='electricityprices' element = {<ElectricityPriceList/>} />
+        <Route path ='educationpricelist' element = {<EducationPriceList/>}/>
+        <Route path =  'mtnprices' element = {<MTNPriceList/>} />
+    
+      </Route>
+      
+        <Route path = '*' element = {<NotFound/>} />
+    <Route path="/login" element={<LoginPage logIn={logIn} />} />
+    <Route path="/signup" element={<SignInPage />} />
+  </Route>
+    ))
   return (
-    <Router>
+    <main>
+    <RouterProvider router = {router}/>
       <ToastContainer />
-      <Routes>
-        <Route
-          path="/"
-          element={myAppIsLoggedIn ? <HomePage onLogout={handleLogout} /> : <Navigate to="/login" />}
-        />
-        <Route path="/login" element={<LoginPage logIn={logIn} />} />
-        <Route path="/signup" element={<SignInPage />} />
-        <Route path="/account" element= {<Account/>}/>
-        <Route path= '/buyAirtime' element= {<BuyAirtime />}/>
-        <Route path = '/buyData' element= {<BuyData/>} />
-        <Route path= '/dataEpin' element = {<DataEpin/>}/>
-        <Route path = '/educationPin' element = {<EducationPin/>}/>
-        <Route path= '/fundWallet' element ={<FundWallet/>} />
-        <Route path = '/buyCable' element = {<PayCableSub />} />
-        <Route path = '/payElect' element={<ElectricityBill />} />
-        <Route path = '/airtimeEpin' element ={<BuyAirtime />}/>
-        <Route path = '/priceList' element = {<PriceList/>}/>
-        <Route path = '/transaction' element={<Transactions/>}/>
-        
-      </Routes>
-    </Router>
+     
+   </main>
   );
 };
 

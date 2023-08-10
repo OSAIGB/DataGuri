@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router,NavLink, Link, Route } from "react-router-dom";
 import Account from "./sidebarlinks/account";
 
 interface sidBarTypes {
@@ -19,10 +19,10 @@ const SideBar: React.FC<sideBarProps> = ({sideBarIcon}) =>{
    
     <div className="sideBar">
     <div>
-<Link to={sideBarIcon.links} rel="noopener noreferrer">
+<NavLink to={sideBarIcon.links} rel="noopener noreferrer">
   {sideBarIcon.bars}
      <FontAwesomeIcon icon={sideBarIcon.icon}/>
-     </Link>
+     </NavLink>
 </div>
     </div>
     

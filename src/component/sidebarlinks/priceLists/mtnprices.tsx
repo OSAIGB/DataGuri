@@ -1,13 +1,9 @@
 import React from 'react';
 
-const PriceList: React.FC = () => {
+const MTNPriceList : React.FC = () => {
   return (
     <div>
-      <h1>Price List</h1>
-      <p>
-        Dashboard ≫ Price List
-      </p>
-      <h1>MTN Service Price List</h1>
+    <h1>MTN Service Price List</h1>
       <table>
         <thead>
           <tr>
@@ -138,4 +134,4 @@ const PriceList: React.FC = () => {
   );
 };
 
-export default PriceList;
+export default MTNPriceList;
