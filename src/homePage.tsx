@@ -160,7 +160,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
   ];
   return (
     <div>
-       <Header /> 
+       
         <section>
       <CatchDisplay />
 

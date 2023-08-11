@@ -9,8 +9,7 @@ const signUp : React.FC = () =>{
 
     <div className='login'>
         <div>
-            <FontAwesomeIcon icon={faHome} />
-           DataGuri 
+        
             <h1>
                Top up your Phone's airtime, get affordable data, 
                pay electricity bills, renew TV subscriptions etc...
