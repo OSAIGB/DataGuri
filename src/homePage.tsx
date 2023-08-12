@@ -10,7 +10,6 @@ import CatchDisplay from './component/catchDisplay'
 import QuickAccess from "./component/quickAccess";
 import Transactions from "./component/transactions";
 import Chat from "./component/chat";
-import { BrowserRouter } from "react-router-dom";
 // Define the prop type for the HomePage component
 interface onLogout {
   onLogout: () => void;
@@ -160,28 +159,32 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
   ];
   return (
     <div>
-       
-        <section>
-      <CatchDisplay />
-
- <div>
+        <section className="homepage-view"> 
+ <div className="sidebar">
         {sidbarArrays.map((card:sidBarTypes, index: number) =>(
       <SideBar sideBarIcon={card} key={index}/>
     ))}
+    
        </div>
-        {/* Map over the walletBalance array and render each item using the WalletBalance component */}
-        {walletBalance.map((walletItem: Wallet, index: number) => (
-          <WalletBalance key={index} card={walletItem} />
-        ))}
+       <div className="home-display">
+        <CatchDisplay />
+        <div className="wallet-items-container">
+            {walletBalance.map((walletItem: Wallet, index: number) => (
+              <div className="wallet-item-row" key={index}>
+                <WalletBalance card={walletItem} />
+              </div> 
+            ))}
+          </div>
+          <QuickAccess />
+        
         <QuickAccess />
-        <div>
           {transactionsList.map((transact: transactionTypes, index: number) =>(
             <Transactions key={index} transactions = {transact} />
           )) }
+          <button onClick={onLogout}>Log Out</button>
         </div>
       </section>
       <Chat />
-      <button onClick={onLogout}>Log Out</button>
     </div>
   );
 };

@@ -6,6 +6,9 @@
     align-items: center;
     background-color: #35424a; /* Suggested color for a transaction platform */
     color: white;
+    position: fixed;
+    width: 100%;
+top: 0;
   }
   
   .logo-wrapper {
@@ -37,3 +40,7 @@
     font-size: 24px;
   }
   
+  .walletButtons{
+    width: 50px;
+    background-color: #e74c3c ;
+  }

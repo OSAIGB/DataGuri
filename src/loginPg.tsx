@@ -8,7 +8,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router';
-
+import Pic from './customer-support (1).svg'
 interface LoginPageProps{
     logIn: () => void
    
@@ -34,7 +34,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
     toast.error('Invalid email or password'); // Show the error as a toast
   } else {
     console.log('Logged in successfully');
-    toast('Logged in successfully')
+    toast.success('Logged in successfully')
     logIn()
     navigate('/')
   }
@@ -45,11 +45,17 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
   return (
 
     <div className='login'>
+      <div className='login-flex'>
+        <div className='form'>
         <div>
             <h1>
                Top up your Phone's airtime, get affordable data, 
                pay electricity bills, renew TV subscriptions etc...
-               <span> Quick. Cheap and Safe</span>
+               <span> Quick. Cheap and Safe</span> 
+
+            </h1>
+            <h1>
+            Enter Your Login details to begin.
             </h1>
         </div>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -72,12 +78,15 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
         <div>
             Remember Me <input type='checkbox'/>
         </div>
+        
         <button type='submit'>Login</button>
-    </form>
-    <p>
+          <p>
         Don't have an account? <NavLink to='/signup'>Sign up here</NavLink>
     </p>
-    
+    </form>
+    </div>
+    <img src={Pic} alt="man on a phone" />
+    </div>
     </div>
   )
 }

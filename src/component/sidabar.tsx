@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { BrowserRouter as Router,NavLink, Link, Route } from "react-router-dom";
 import Account from "./sidebarlinks/account";
-
+import './sidebar.css'
 interface sidBarTypes {
   bars: string
   icon: any
@@ -18,13 +18,15 @@ const SideBar: React.FC<sideBarProps> = ({sideBarIcon}) =>{
     
    
     <div className="sideBar">
-    <div>
+    <div className="sidebar-links">
 <NavLink to={sideBarIcon.links} rel="noopener noreferrer">
-  {sideBarIcon.bars}
+ <div className='icons-bars'> 
+ <div>{sideBarIcon.bars}</div>
      <FontAwesomeIcon icon={sideBarIcon.icon}/>
-     </NavLink>
+</div>     </NavLink>
+     </div>
 </div>
-    </div>
+    
     
   )
 }

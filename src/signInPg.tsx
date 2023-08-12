@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 const signUp : React.FC = () =>{
   return (
 
-    <div className='login'>
+    <div className='login-register'>
         <div>
         
             <h1>
@@ -21,7 +21,7 @@ const signUp : React.FC = () =>{
                 Please fill up the form below to create an account 
             </h3>
         </div>
-    <form>
+    <form className='form-register'>
         <label>
             Full Name:
             <input 
@@ -67,7 +67,7 @@ const signUp : React.FC = () =>{
         </label>
         <button type='submit'>Register</button>
     </form>
-    <p>Already have an account? Login <NavLink to={'/'}>here</NavLink></p>
+    <p>Already have an account? Login <NavLink to={'/login'}>here</NavLink></p>
     <p>
       
     </p>
