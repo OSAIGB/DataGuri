@@ -10,6 +10,10 @@ import CatchDisplay from './component/catchDisplay'
 import QuickAccess from "./component/quickAccess";
 import Transactions from "./component/transactions";
 import Chat from "./component/chat";
+import MoniePointLogo from './moniepoint.png'
+import Chip from './chip.png'
+import Sterling from './sterlingbank.png'
+import Wema from './wema.svg'
 // Define the prop type for the HomePage component
 interface onLogout {
   onLogout: () => void;
@@ -35,6 +39,8 @@ interface Wallet {
   bankName: string;
   accountName: string;
   fundwallet: string
+  bankLogo: string
+  chip: string
 }
 interface sidBarTypes {
   bars: string
@@ -53,7 +59,9 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       bonus: 0.00,
       accountNumber: 6272075831,
       bankName: 'MoniePoint MFB',
-      fundwallet: 'Fund Wallet'
+      fundwallet: 'Fund Wallet',
+      bankLogo : MoniePointLogo,
+      chip: Chip
     },
     {
       title: 'wallet Balance',
@@ -62,7 +70,9 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       bonus: 0.00,
       accountNumber: 8984108498,
       bankName: 'Sterling bank',
-      fundwallet: 'Fund Wallet'
+      fundwallet: 'Fund Wallet',
+      bankLogo : Sterling,
+      chip: Chip
     },
     {
       title: 'wallet Balance',
@@ -71,7 +81,9 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       bonus: 0.00,
       accountNumber: 9178609233,
       bankName: 'Wema Bank',
-      fundwallet: 'Fund Wallet'
+      fundwallet: 'Fund Wallet',
+      bankLogo : Wema,
+      chip: Chip
     },
   ];
   const transactionsList : transactionTypes[]= [

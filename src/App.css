@@ -129,15 +129,35 @@ body, html {
 
 
 .wallet-items-container {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
-  gap: 10px; /* Add spacing between wallet items */
-  width: 400px;
+  gap: 8px;
+  width: 100%;
   overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .wallet-item-row {
   display: flex;
   flex-direction: column;
   align-items: center; 
+}
+.wallet-items-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.home-display{
+  width: 100%;
+}
+
+.chip{
+  width: 50px;
 }

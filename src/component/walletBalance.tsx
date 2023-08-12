@@ -1,5 +1,6 @@
 import React from "react";
 import "./wallet.css";
+import logo from './moniepoint.png'
 
 interface Wallets {
   title: string;
@@ -9,6 +10,8 @@ interface Wallets {
   bankName: string;
   accountName: string;
   fundwallet: string;
+  bankLogo: string
+  chip: string
 }
 
 interface WalletBalanceProps {
@@ -24,12 +27,16 @@ const WalletBalance: React.FC<WalletBalanceProps> = ({ card }) => {
 
   return (
     <div className="wallet-container">
+      <div className="logo">
+        <img src={card.chip} alt="Chip" className="chip" />
+        <img src={card.bankLogo} alt="Bank Logo" className="bank-logo" />
+      </div>
       <div className="wallet-item title">{card.title}</div>
       <div className="wallet-item amount">{card.amount}</div>
       <div className="wallet-item bonus">{card.bonus}</div>
       <div className="wallet-item accountnumber">{card.accountNumber}</div>
       <button onClick={handleCopyClick} className="wallet-item walletButtons">
-        copy
+        Copy
       </button>
       <div className="wallet-item bankname">{card.bankName}</div>
       <div className="wallet-item account">{card.accountName}</div>
@@ -39,3 +46,8 @@ const WalletBalance: React.FC<WalletBalanceProps> = ({ card }) => {
 };
 
 export default WalletBalance;
+
+
+
+
+
