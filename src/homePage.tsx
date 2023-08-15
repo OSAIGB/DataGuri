@@ -14,6 +14,7 @@ import MoniePointLogo from './moniepoint.png'
 import Chip from './chip.png'
 import Sterling from './sterlingbank.png'
 import Wema from './wema.svg'
+import Map from './map.png'
 // Define the prop type for the HomePage component
 interface onLogout {
   onLogout: () => void;
@@ -53,7 +54,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
   // Define the data for wallet balances as an array of Wallet objects
   const walletBalance: Wallet[] = [
     {
-      title: 'wallet Balance',
+      title: 'Wallet Balance',
       accountName: 'Guri',
       amount: 100,
       bonus: 0.00,
@@ -64,7 +65,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       chip: Chip
     },
     {
-      title: 'wallet Balance',
+      title: 'Wallet Balance',
       accountName: 'Guri',
       amount: 100,
       bonus: 0.00,
@@ -75,7 +76,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       chip: Chip
     },
     {
-      title: 'wallet Balance',
+      title: 'Wallet Balance',
       accountName: 'Guri',
       amount: 100,
       bonus: 0.00,
@@ -169,6 +170,12 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       links: '/developerApi'
     }
   ];
+
+  const backgroundImage = {
+    backgroundImage: `url(${Map})`,
+    backgroundSize: 'cover',
+    filter: 'blur(10px)'
+  }
   return (
     <div>
         <section className="homepage-view"> 
@@ -180,19 +187,14 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
        </div>
        <div className="home-display">
         <CatchDisplay />
-        <div className="wallet-items-container">
+        <div className="wallet-items-container"  >
             {walletBalance.map((walletItem: Wallet, index: number) => (
-              <div className="wallet-item-row" key={index}>
+              <div className={`wallet-item-row wallet-bg-${index}` } key={index} >
                 <WalletBalance card={walletItem} />
               </div> 
             ))}
           </div>
-          <QuickAccess />
-        
-        <QuickAccess />
-          {transactionsList.map((transact: transactionTypes, index: number) =>(
-            <Transactions key={index} transactions = {transact} />
-          )) }
+          <QuickAccess transactions={transactionsList} />
           <button onClick={onLogout}>Log Out</button>
         </div>
       </section>

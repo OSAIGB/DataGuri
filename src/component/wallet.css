@@ -1,14 +1,13 @@
 
 .wallet-container {
     width: 350px;
-    height: 200px;
-    background-color: #3498db;
+  
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+    
     color: white;
     font-family: Arial, sans-serif;
   }
@@ -23,3 +22,38 @@
     align-items: center;
     
   }
+  .wallet-item.title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 20px;
+}
+.copy{
+  cursor: pointer;
+}
+.wallet-item.accountnumber {
+  font-size: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.wallet-item.bonus{
+  display: flex;
+  gap: 5px;
+}
+.details{
+  position: relative;
+  bottom: -20px;
+  font-weight: 600;
+}
+.name-bonus{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.accountName {
+  display: flex;
+  flex-direction: row;
+}
+

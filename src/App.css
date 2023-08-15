@@ -1,4 +1,6 @@
 /* LoginPg.css */
+
+
 body, html {
   margin: 0;
   padding: 0;
@@ -128,31 +130,21 @@ body, html {
 }
 
 
-.wallet-items-container {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-  width: 100%;
-  overflow: scroll;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
 
 .wallet-item-row {
   display: flex;
-  flex-direction: column;
-  align-items: center; 
+  
 }
 .wallet-items-container {
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    gap: 17px;
     width: 100%;
     overflow: scroll;
     overflow-y: hidden;
     overflow-x: scroll;
+    padding-bottom: 10px;
 }
 .home-display{
   width: 100%;
@@ -161,3 +153,59 @@ body, html {
 .chip{
   width: 50px;
 }
+/* Define classes for different background colors */
+/* Define dynamic classes for different background colors */
+.wallet-bg-0  {
+  
+ 
+  border-radius: 15px;
+background-color: lightgray;
+  padding: 20px;
+  width: 350px;
+  height: 200px;
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+.wallet-bg-0 .details{
+  color: rgb(3, 3, 29);
+}
+
+.wallet-bg-1 {
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
+  background-color: lightgray;
+
+}
+.wallet-bg-1 .details{
+  color: #2c3e50;
+}
+
+.wallet-bg-2 {
+  width: 350px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
+  background-color: lightgray;
+}
+.wallet-bg-2 .details{
+  color: #2c3e50;
+}
+.wallet-bg-2 .bank-logo{
+  height: 53px;
+}
+.cheap{
+  height: 40px;
+  color: #c0392b;
+  background-color: whitesmoke;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+text-align: center;
+font-size: 26px;
+}
+/* Add more classes and colors for other indices as needed */
+

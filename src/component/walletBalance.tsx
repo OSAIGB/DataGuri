@@ -1,6 +1,8 @@
 import React from "react";
 import "./wallet.css";
-import logo from './moniepoint.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopy } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from "react-toastify";
 
 interface Wallets {
   title: string;
@@ -19,28 +21,38 @@ interface WalletBalanceProps {
 }
 
 const WalletBalance: React.FC<WalletBalanceProps> = ({ card }) => {
-  const handleCopyClick = () => {
+  const handleCopyClick: () =>  void = () => {
     navigator.clipboard.writeText(card.accountNumber.toString())
-      .then(() => alert(`Number copied to clipboard`))
+      .then(() => toast.success(`Number copied to clipboard`))
       .catch((error) => console.error('Error copying to clipboard'));
   };
 
+ 
   return (
-    <div className="wallet-container">
+    <div className="wallet-container" >
+    
       <div className="logo">
         <img src={card.chip} alt="Chip" className="chip" />
         <img src={card.bankLogo} alt="Bank Logo" className="bank-logo" />
       </div>
-      <div className="wallet-item title">{card.title}</div>
-      <div className="wallet-item amount">{card.amount}</div>
-      <div className="wallet-item bonus">{card.bonus}</div>
-      <div className="wallet-item accountnumber">{card.accountNumber}</div>
-      <button onClick={handleCopyClick} className="wallet-item walletButtons">
-        Copy
-      </button>
-      <div className="wallet-item bankname">{card.bankName}</div>
-      <div className="wallet-item account">{card.accountName}</div>
-      <div className="wallet-item fundwallet">{card.fundwallet}</div>
+      <div className="details">
+      <div className="wallet-item title">{card.title}: 
+      <span className="wallet-item amount">{card.amount}</span></div>
+      <div className="background-image"></div>
+      <div className="wallet-item accountnumber">{card.accountNumber}
+      <FontAwesomeIcon icon={faCopy}  className="copy" onClick={handleCopyClick}/></div>
+      <div className="name-bonus">
+        
+      <div className="wallet-item account">
+        <div className="accountName"><p>Account Name:</p><p>{card.accountName}</p></div></div>
+         <div className="wallet-item bonus"> <p>Bonus Balance:</p>
+      <p>{card.bonus}</p>
+      </div>
+    
+      </div>
+     
+      {/* <div className="wallet-item fundwallet">{card.fundwallet}</div> */}
+    </div>
     </div>
   );
 };

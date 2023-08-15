@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     <div className="navbar">
       <header className="header">
         <div className="logo-wrapper">
-          <FontAwesomeIcon icon={faHome} className="logo" />
+          <FontAwesomeIcon icon={faHome} className="nav-logo" />
           <Link to="/">
             <h1 className="name">DataGuri</h1>
           </Link>

@@ -1,0 +1,75 @@
+.access-container{
+    display: grid;
+    grid-template-areas: 'amount amount transaction transaction transaction'
+    'apps apps transaction transaction transaction'
+    'invite invite transaction transaction transaction'
+    'access access transaction transaction transaction';
+    gap: 10px;
+
+}
+
+.amount-spent{grid-area: amount;}
+.access{grid-area: access;}
+.invite{grid-area: invite;}
+.apps-bot{grid-area: apps;}
+.transactions{grid-area: transaction}
+
+
+.access-container h3{
+    color: #e74c3c;
+    text-align: center;
+}
+.amount-span{
+    color: #2c3e50;
+    font-size: 40px;
+    margin: 0;
+    text-align: justify;
+}
+
+.amount-spent {
+    grid-area: amount;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+    border-radius: 10px;
+}
+.invite p{
+    font-size: 20px;
+    color: #2c3e50;
+}
+.invite a{
+    background-color: #e74c3c;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+.apps-bot a{
+    font-size: 70px;
+}
+.apps-bot {
+    grid-area: apps;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    border-radius: 10px;
+}
+.quick-div{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    
+
+}
+.access{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 10px;
+}
+.invite{
+    border-radius: 10px;
+}
