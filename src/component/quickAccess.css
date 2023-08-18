@@ -1,23 +1,39 @@
 .access-container{
     display: grid;
-    grid-template-areas: 'amount amount transaction transaction transaction'
-    'apps apps transaction transaction transaction'
-    'invite invite transaction transaction transaction'
-    'access access transaction transaction transaction';
-    gap: 10px;
-
+    grid-template-areas:
+    'amount transaction transaction transaction'
+    'apps transaction transaction transaction'
+    'invite transaction transaction transaction'
+    'access transaction transaction transaction';
+gap: 5px;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
-.amount-spent{grid-area: amount;}
-.access{grid-area: access;}
-.invite{grid-area: invite;}
-.apps-bot{grid-area: apps;}
+
+
+.amount-spent{grid-area: amount;
+background-color: whitesmoke;}
+.access{grid-area: access;background-color: whitesmoke;}
+.invite{grid-area: invite;background-color: whitesmoke;}
+.apps-bot{grid-area: apps;background-color: whitesmoke;}
 .transactions{grid-area: transaction}
 
+.transaction-div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 711px;
+    border-bottom: red solid 2px;
+    padding: 5px;
+    border-radius: 4px;
 
+}
 .access-container h3{
     color: #e74c3c;
     text-align: center;
+    margin: 0;
 }
 .amount-span{
     color: #2c3e50;
@@ -25,7 +41,10 @@
     margin: 0;
     text-align: justify;
 }
-
+.invite-content {
+    display: flex;
+    align-items: center;
+  }
 .amount-spent {
     grid-area: amount;
     display: flex;
@@ -40,36 +59,120 @@
     color: #2c3e50;
 }
 .invite a{
-    background-color: #e74c3c;
+    
     border-radius: 5px;
     padding: 10px;
-    color: white;
+    
 }
 .apps-bot a{
     font-size: 70px;
 }
 .apps-bot {
-    grid-area: apps;
     display: flex;
     align-items: center;
     flex-direction: column;
-    
     border-radius: 10px;
-}
-.quick-div{
+    text-align: center; /* Center the text */
+  }
+  .quick-div {
     display: flex;
     gap: 20px;
     font-size: 20px;
-    
-
-}
+    align-items: center;
+    padding-top: 20px;
+  }
 .access{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     border-radius: 10px;
 }
 .invite{
     border-radius: 10px;
+    text-align: center;
+}
+.invite-div a,
+.invite-div p{
+    font-size: 15px;
+}
+.transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    align-items: center;
+}
+.amount-spent,
+.invite,
+.access,
+.apps-bot
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    padding: 10px; /* Add padding for spacing */
+width: 300px;}
+
+.amount-today {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.transaction-div h1{
+    color: #e74c3c;
+}
+.transaction-id{
+    font-size: 15px;
+    color: #2c3e50;
+}
+.transaction-amount{
+    font-size: 15px;
+    color: #2c3e50;
+}
+.transactions h1 {
+    color: #e74c3c;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.transactions h4{
+    font-size: 20px;
+    margin: 0;
+}
+.fund-wallet{
+    background-color: #2c3e50;
+    color: whitesmoke;
+    padding: 5px;
+border-radius: 4px;
+margin: 0;
+}
+.redeem-coupon{
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #2c3e50;
+font-weight: 600;
+font-size: 16px;
+}
+
+.bonus-wallet{
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #2c3e50;
+font-weight: 600;
+font-size: 16px;
+}
+.bonus-wallet .bonus-wallet-icon{
+    font-size: 40px;
+    color: #2c3e50;
+}
+.redeem-coupon .percentage{
+    font-size: 40px;
+    color: #2c3e50;
 }

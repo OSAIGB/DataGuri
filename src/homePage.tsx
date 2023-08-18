@@ -4,7 +4,7 @@ import Header from "./component/header";
 import WalletBalance from "./component/walletBalance";
 import SideBar from "./component/sidabar";
 import { faHome,faCode, faWifi, faPhone, faTv,faBolt, faSchool, faIdCard, faWallet, faTag, faRefresh, faUser,
-faMessage } from "@fortawesome/free-solid-svg-icons";
+faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CatchDisplay from './component/catchDisplay'
 import QuickAccess from "./component/quickAccess";
@@ -168,6 +168,11 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       bars: 'Developer API',
       icon: faCode,
       links: '/developerApi'
+    },
+    {
+      bars: 'Logout',
+      icon: faSignOutAlt,
+      links: '/login'
     }
   ];
 
@@ -195,10 +200,11 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
             ))}
           </div>
           <QuickAccess transactions={transactionsList} />
-          <button onClick={onLogout}>Log Out</button>
-        </div>
+          
+        </div> 
+        
       </section>
-      <Chat />
+     <Chat/>
     </div>
   );
 };

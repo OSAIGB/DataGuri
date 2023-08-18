@@ -42,7 +42,6 @@ const WalletBalance: React.FC<WalletBalanceProps> = ({ card }) => {
       <div className="wallet-item accountnumber">{card.accountNumber}
       <FontAwesomeIcon icon={faCopy}  className="copy" onClick={handleCopyClick}/></div>
       <div className="name-bonus">
-        
       <div className="wallet-item account">
         <div className="accountName"><p>Account Name:</p><p>{card.accountName}</p></div></div>
          <div className="wallet-item bonus"> <p>Bonus Balance:</p>

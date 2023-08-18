@@ -1,0 +1,10 @@
+.hover-icons{
+    display: flex;
+    flex-direction:column-reverse;
+    font-size: 50px;
+    z-index: 9999;
+}
+.chat-icon{
+display: flex;
+flex-direction: column-reverse;
+}

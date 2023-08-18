@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./quickAccess.css"; // Make sure to import your CSS file
 
 const CatchDisplay: React.FC = () => {
   const texts = [
@@ -9,18 +10,32 @@ const CatchDisplay: React.FC = () => {
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 7000); 
+      setIsTransitioning(true);
+
+      setTimeout(() => {
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        setIsTransitioning(false);
+      }, 500); // Wait for the transition duration before changing text
+
+    }, 7000);
 
     return () => {
       clearInterval(interval);
     };
   }, []);
 
-  return <h3 className="cheap">{texts[currentTextIndex]}</h3>;
+  return (
+    <div className="cheap">
+
+    
+    <h3 className={`cheap-text ${isTransitioning ? "catch-transition" : ""}`}>
+      {texts[currentTextIndex]}
+    </h3></div>
+  );
 };
 
 export default CatchDisplay;

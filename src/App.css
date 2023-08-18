@@ -13,6 +13,8 @@ body, html {
     flex-direction: column;
     justify-content: center;
   }
+ 
+  
   .login-flex{
     display: flex;
     flex-direction: row;
@@ -156,10 +158,8 @@ body, html {
 /* Define classes for different background colors */
 /* Define dynamic classes for different background colors */
 .wallet-bg-0  {
-  
- 
   border-radius: 15px;
-background-color: lightgray;
+background-color: whitesmoke;
   padding: 20px;
   width: 350px;
   height: 200px;
@@ -168,6 +168,9 @@ background-color: lightgray;
 .wallet-bg-0 .details{
   color: rgb(3, 3, 29);
 }
+.wallet-bg-0 .details{
+  color: #2c3e50;
+}
 
 .wallet-bg-1 {
   width: 350px;
@@ -175,7 +178,7 @@ background-color: lightgray;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
-  background-color: lightgray;
+  background-color: whitesmoke;
 
 }
 .wallet-bg-1 .details{
@@ -188,7 +191,7 @@ background-color: lightgray;
   padding: 20px;
   border-radius: 15px;
   box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
-  background-color: lightgray;
+  background-color: whitesmoke;
 }
 .wallet-bg-2 .details{
   color: #2c3e50;
@@ -197,15 +200,20 @@ background-color: lightgray;
   height: 53px;
 }
 .cheap{
-  height: 40px;
-  color: #c0392b;
+  height: 50px;
+  color: #e74c3c;
   background-color: whitesmoke;
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 text-align: center;
 font-size: 26px;
+margin-bottom: 10px;
 }
 /* Add more classes and colors for other indices as needed */
+.catch-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 
