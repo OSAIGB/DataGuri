@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.73cb541f.css",
+    "main.js": "/static/js/main.be98b595.js",
+    "static/js/787.03d023e3.chunk.js": "/static/js/787.03d023e3.chunk.js",
+    "static/media/map.png": "/static/media/map.480761c1e1cddaa76219.png",
+    "static/media/sterlingbank.png": "/static/media/sterlingbank.6b93d79583f548eed9f5.png",
+    "static/media/customer-support (1).svg": "/static/media/customer-support (1).bd878e5f5500a8bb6a7f740346872e41.svg",
+    "static/media/wema.svg": "/static/media/wema.f193d0bd9d07f57b45cffa7d7cd31c4d.svg",
+    "static/media/whatsapp.svg": "/static/media/whatsapp.0825a75464cb684560c588f6ebf4a810.svg",
+    "static/media/chatWithUS.svg": "/static/media/chatWithUS.8284a98783487a0be60741d3cb726640.svg",
+    "index.html": "/index.html",
+    "main.73cb541f.css.map": "/static/css/main.73cb541f.css.map",
+    "main.be98b595.js.map": "/static/js/main.be98b595.js.map",
+    "787.03d023e3.chunk.js.map": "/static/js/787.03d023e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73cb541f.css",
+    "static/js/main.be98b595.js"
+  ]
+}
