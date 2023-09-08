@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DataGuri/static/css/main.73cb541f.css",
-    "main.js": "/DataGuri/static/js/main.bc03437d.js",
+    "main.js": "/DataGuri/static/js/main.5f808c36.js",
     "static/js/787.03d023e3.chunk.js": "/DataGuri/static/js/787.03d023e3.chunk.js",
     "static/media/map.png": "/DataGuri/static/media/map.480761c1e1cddaa76219.png",
     "static/media/sterlingbank.png": "/DataGuri/static/media/sterlingbank.6b93d79583f548eed9f5.png",
@@ -11,11 +11,11 @@
     "static/media/chatWithUS.svg": "/DataGuri/static/media/chatWithUS.8284a98783487a0be60741d3cb726640.svg",
     "index.html": "/DataGuri/index.html",
     "main.73cb541f.css.map": "/DataGuri/static/css/main.73cb541f.css.map",
-    "main.bc03437d.js.map": "/DataGuri/static/js/main.bc03437d.js.map",
+    "main.5f808c36.js.map": "/DataGuri/static/js/main.5f808c36.js.map",
     "787.03d023e3.chunk.js.map": "/DataGuri/static/js/787.03d023e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73cb541f.css",
-    "static/js/main.bc03437d.js"
+    "static/js/main.5f808c36.js"
   ]
 }
