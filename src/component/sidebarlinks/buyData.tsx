@@ -1,4 +1,11 @@
 import React, {useState} from 'react'
+import { faWifi } from '@fortawesome/free-solid-svg-icons';
+import SideBar from '../sidabar';
+import './form.css'
+interface networksTypes {
+  value: string
+  label : string
+}
 
 const BuyData: React.FC = () =>{
   const [network, setNetwork] = useState<string>('');
@@ -6,16 +13,27 @@ const BuyData: React.FC = () =>{
   const [dataPlan, setDataPlan] = useState<string>('');
   const [phoneNumber, setPhoneNumber] = useState<string>('');
   const [amount, setAmount] = useState('');
+
+
+const networks : networksTypes[] =[
+  {value: 'MTN', label: 'MTN'},
+  {value: 'GLO', label: 'GLO'},
+  {value: 'AIRTEL', label: 'AIRTEL'},
+  {value: '9MOBILE', label: '9MOBILE'}
+]
+
   return (
-    <form>
+    <div>
+    <form className='form'>
       <div>
         <label>
           Network:
-          <input
-            type="text"
-            value={network}
-            onChange={(e) => setNetwork(e.target.value)}
-          />
+          <select>
+            <option value="">Select Network</option>
+            {
+              networks.map((providers) =>(<option key={providers.value} value={providers.value}>{providers.label}</option>))
+            }
+          </select>
         </label>
       </div>
       <div>
@@ -60,6 +78,7 @@ const BuyData: React.FC = () =>{
       </div>
       <button type="submit">Purchase</button>
     </form>
+    </div>
   );
 }
 

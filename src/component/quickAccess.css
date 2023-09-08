@@ -176,3 +176,39 @@ font-size: 16px;
     font-size: 40px;
     color: #2c3e50;
 }
+@media (max-width: 900px) {
+    .access-container {
+        grid-template-areas:
+            'amount'
+            'apps'
+            'invite'
+            'access'
+            'transaction';
+        grid-template-columns: 1fr; /* Force a single column */
+    }
+    
+    .amount-spent,
+    .apps-bot,
+    .invite,
+    .access {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .transactions{
+        display: flex;
+        width: 94%;
+    }
+    .transaction-div{
+        width: 100%;
+    }
+    .access-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 59px;
+    }
+    
+}

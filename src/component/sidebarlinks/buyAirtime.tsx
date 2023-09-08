@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import './form.css'
 
 const BuyAirtime: React.FC = ()  =>{
   const [network, setNetwork] = useState<string>('');
@@ -7,7 +7,7 @@ const [phoneNumber, setPhoneNumber] = useState<string>('');
 const [amount, setAmount] = useState<string>('');
 
   return (
-    <form>
+    <form className='form'>
       <div>
         <label>
           Network:

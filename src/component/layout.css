@@ -9,6 +9,7 @@
     position: fixed;
     width: 100%;
 top: 0;
+height: 40px;
 z-index: 1;
   }
   
@@ -39,9 +40,32 @@ z-index: 1;
   
   .notification {
     font-size: 24px;
+    display: block;
+    cursor: pointer;
+    padding-right: 30px;
   }
   
   .walletButtons{
     width: 50px;
     background-color: #e74c3c ;
+  }
+.icon-menu{
+  display: none;
+}
+  @media screen and (max-width: 900px) {
+   .nav-logo{
+    font-size: 18px;
+    padding-left: 8px;
+   }
+   .name{
+    font-size: 18px;
+   }
+ .icon-menu{
+  display: block;
+  margin-right: 12px;
+  cursor: pointer;
+ }
+ .notification{
+  padding-right: 10px;
+ }
   }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './form.css'
 const DataEpin: React.FC = () => {
   const [network, setNetwork] = useState<string>('MTN');
   const [plan, setPlan] = useState<string>('');
@@ -18,7 +18,7 @@ const DataEpin: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <div>
         <label>
           Network:

@@ -3,6 +3,8 @@ import React from "react";
 import { BrowserRouter as Router,NavLink, Link, Route } from "react-router-dom";
 import Account from "./sidebarlinks/account";
 import './sidebar.css'
+
+
 interface sidBarTypes {
   bars: string
   icon: any
@@ -11,9 +13,8 @@ interface sidBarTypes {
 interface sideBarProps {
   sideBarIcon : sidBarTypes
 }
-
 const SideBar: React.FC<sideBarProps> = ({sideBarIcon}) =>{
-
+ 
   return(
     
    
@@ -26,8 +27,8 @@ const SideBar: React.FC<sideBarProps> = ({sideBarIcon}) =>{
 </div>     </NavLink>
      </div>
 </div>
-    
-    
+   
+
   )
 }
 export default SideBar

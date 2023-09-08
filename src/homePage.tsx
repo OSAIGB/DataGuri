@@ -1,9 +1,10 @@
 // Import necessary modules and components
 import React from "react";
+import {useState} from 'react'
 import Header from "./component/header";
 import WalletBalance from "./component/walletBalance";
 import SideBar from "./component/sidabar";
-import { faHome,faCode, faWifi, faPhone, faTv,faBolt, faSchool, faIdCard, faWallet, faTag, faRefresh, faUser,
+import { faBars,faCode, faWifi, faPhone, faTv,faBolt, faSchool, faIdCard, faWallet, faTag, faRefresh, faUser,
 faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CatchDisplay from './component/catchDisplay'
@@ -15,6 +16,7 @@ import Chip from './chip.png'
 import Sterling from './sterlingbank.png'
 import Wema from './wema.svg'
 import Map from './map.png'
+import QuickLinks from "./quickLinks";
 // Define the prop type for the HomePage component
 interface onLogout {
   onLogout: () => void;
@@ -42,11 +44,6 @@ interface Wallet {
   fundwallet: string
   bankLogo: string
   chip: string
-}
-interface sidBarTypes {
-  bars: string
-  icon: any
-  links: string
 }
 
 // Define the HomePage component with the provided onLogout prop
@@ -102,94 +99,17 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
     }
   ]
  
-  const sidbarArrays: sidBarTypes[] = [
-    {
-      bars: 'Dashboard',
-      icon: faHome,
-      links: '/'
-    },
-    {
-      bars: 'BuyData',
-      icon: faWifi,
-      links: '/buyData'
-
-    },
-    {
-      bars: 'Buy Airtime',
-      icon: faPhone,
-      links: '/buyAirtime'
-    },
-    {
-      bars: 'Pay Cable Sub',
-      icon: faTv,
-      links: '/buyCable'
-    },
-    {
-      bars: 'Pay Electricity Bill',
-      icon: faBolt,
-      links: '/payElect'
-    },
-    {
-      bars: 'Education Pin',
-      icon: faSchool,
-      links: '/educationPin'
-    },
-    {
-      bars: 'Data E-Pin',
-      icon: faIdCard,
-      links: '/dataEpin'
-    },
-    {
-      bars: 'Airtime E-Pin',
-      icon: faIdCard,
-      links: '/airtimeEpin'
-    },
-    {
-      bars: 'Fund Wallet',
-      icon: faWallet,
-      links: '/fundWallet'
-    },
-    {
-      bars: 'Price List',
-      icon: faTag,
-      links: '/priceList'
-    },
-    {
-      bars: 'Transaction',
-      icon: faRefresh,
-      links: '/transaction'
-    },
-    {
-      bars: 'Account',
-      icon: faUser,
-      links: '/account'
-    },
-    {
-      bars: 'Developer API',
-      icon: faCode,
-      links: '/developerApi'
-    },
-    {
-      bars: 'Logout',
-      icon: faSignOutAlt,
-      links: '/login'
-    }
-  ];
 
   const backgroundImage = {
     backgroundImage: `url(${Map})`,
     backgroundSize: 'cover',
     filter: 'blur(10px)'
   }
+
   return (
     <div>
         <section className="homepage-view"> 
- <div className="sidebar">
-        {sidbarArrays.map((card:sidBarTypes, index: number) =>(
-      <SideBar sideBarIcon={card} key={index}/>
-    ))}
     
-       </div>
        <div className="home-display">
         <CatchDisplay />
         <div className="wallet-items-container"  >
@@ -205,6 +125,8 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
         
       </section>
      <Chat/>
+     <div className="quick-links-container">
+     <QuickLinks/> </div>
     </div>
   );
 };

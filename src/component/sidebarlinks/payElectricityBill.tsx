@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './form.css'
 // Define the type for DISCO options
 type DiscoOption = {
   value: string;
@@ -30,7 +30,7 @@ const ElectricityBill: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <div>
         <label>
           DISCO Type:

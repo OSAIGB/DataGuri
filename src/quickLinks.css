@@ -1,0 +1,32 @@
+.bottom-link-container{
+   
+display: none;
+}
+
+.bottom-link{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.bottom-link p{
+    margin:auto;
+    font-size: 14px;
+} 
+@media screen and (max-width: 900px) {
+    .bottom-link-container{
+        display: flex;
+flex-direction: row;
+width: 100%;
+position: fixed;
+z-index: 89;
+bottom: 0;
+justify-content: space-between;
+background-color: whitesmoke;
+box-shadow: 4px 4px 4px 4px;
+    }
+   
+}

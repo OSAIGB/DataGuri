@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './form.css'
 // Define the type for Education Pin options
 type EducationPinOption = {
   value: string;
@@ -28,7 +28,7 @@ const EducationPin: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <div>
         <label>
           Education Pin:

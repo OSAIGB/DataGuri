@@ -55,3 +55,21 @@
   flex-direction: row;
 }
 
+@media screen and (max-width: 900px) {
+  .wallet-item-row{
+    width: 70%;
+    height: 150px;
+  }
+  .bank-logo{
+    height: 29px;
+  }
+  .wallet-item.accountnumber{
+    font-size: 30px;
+  }
+  .chip{
+    width: 30px;
+  }
+  .name-bonus{
+    font-size: 10px;
+  }
+}

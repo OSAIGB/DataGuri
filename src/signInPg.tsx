@@ -30,7 +30,7 @@ const signUp : React.FC = () =>{
             placeholder='first and lastname'/>
         </label>
         <label>
-            Email:
+            Email Address:
             <input 
             type='email'
             required

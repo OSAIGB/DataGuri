@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import './form.css'
 const Account = () =>{
   const [network, setNetwork] = useState('');
   const [dataType, setDataType] = useState('');
@@ -9,7 +9,7 @@ const Account = () =>{
     return (
       
 
-      <form >
+      <form className='form' >
         <div>
           <label>
             Network:

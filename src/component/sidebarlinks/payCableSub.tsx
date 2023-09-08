@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './form.css'
 interface FormData {
   cableType: string;
   cablePlan: string;
@@ -34,7 +34,7 @@ const PayCableSub: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <div>
         <label>
           Cable Type:

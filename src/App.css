@@ -8,7 +8,7 @@ body, html {
 .login {
     background-color: white; /* White background */
     color: #2c3e50; /* Complementary color */
-    padding: 20px;
+    padding: 88px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,6 @@ body, html {
   form {
     width: 100%;
     max-width: 400px;
-    margin-top: 20px;
   }
   
   input[type="checkbox"] {
@@ -113,16 +112,7 @@ body, html {
     margin: 0 auto;
 }
 
-.sidebar {
-  width: 250px; /* Adjust the width as needed */
-  position: fixed;
-  top: 58px; /* Align the sidebar to the top of the viewport */
-  bottom: 0;
-  left: 0; /* Align the sidebar to the left of the viewport */
 
-  color: #fff; /* Example text color */
-  overflow-y: scroll; /* Add scrollbar if content overflows */
-}
 
 .homepage-view {
   display: flex;
@@ -200,7 +190,7 @@ background-color: whitesmoke;
   height: 53px;
 }
 .cheap{
-  height: 50px;
+  height: 80px;
   color: #e74c3c;
   background-color: whitesmoke;
   padding-bottom: 20px;
@@ -217,3 +207,50 @@ margin-bottom: 10px;
   transition: opacity 0.5s ease-in-out;
 }
 
+@media screen and (max-width:900px){
+  .homepage-view{
+    margin-left: 0;
+    padding: 10px;
+    padding-top: 40px;
+  }
+  .login{
+    padding: 27px;
+  }
+  .login-flex form input{
+    width: 93%;
+  }
+  .header{
+    height: 20px;
+  }
+  .cheap-text{
+    font-size: 18px;
+  }
+  .cheap{
+    height: 50px;
+  }
+  input{
+    width: 80%;
+  }
+  .form{
+    padding: 29px;
+  }
+  button{
+    width: 87%;
+  }
+}
+
+.homepage-bars{
+  position: fixed;
+  top: 42px;
+  font-size: 30px;
+  cursor: pointer;
+padding-left: 7px;
+}
+
+.homepage-bars {
+  transition: transform 0.3s ease-in-out;
+}
+
+.homepage-bars.visible {
+  transform: translateX(244px);
+}

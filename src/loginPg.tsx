@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
+import './login.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from 'react-router-dom';
@@ -46,7 +47,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
 
     <div className='login'>
       <div className='login-flex'>
-        <div className='form'>
+        <div className='login-form'>
         <div>
             <h1>
                Top up your Phone's airtime, get affordable data, 
@@ -85,7 +86,7 @@ const onSubmit: SubmitHandler<FormData> = (data) => {
     </p>
     </form>
     </div>
-    <img src={Pic} alt="man on a phone" />
+    <img src={Pic} alt="man on a phone"  className='login-img'/>
     </div>
     </div>
   )

@@ -21,7 +21,7 @@ const CatchDisplay: React.FC = () => {
         setIsTransitioning(false);
       }, 500); // Wait for the transition duration before changing text
 
-    }, 7000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
