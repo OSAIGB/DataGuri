@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/dataguri/static/css/main.bc7fa64b.css",
-    "main.js": "/dataguri/static/js/main.2bafdb3e.js",
-    "static/js/787.03d023e3.chunk.js": "/dataguri/static/js/787.03d023e3.chunk.js",
-    "static/media/map.png": "/dataguri/static/media/map.480761c1e1cddaa76219.png",
-    "static/media/customer-support (1).svg": "/dataguri/static/media/customer-support (1).bd878e5f5500a8bb6a7f740346872e41.svg",
-    "static/media/whatsapp.svg": "/dataguri/static/media/whatsapp.0825a75464cb684560c588f6ebf4a810.svg",
-    "static/media/chatWithUS.svg": "/dataguri/static/media/chatWithUS.8284a98783487a0be60741d3cb726640.svg",
-    "index.html": "/dataguri/index.html",
-    "main.bc7fa64b.css.map": "/dataguri/static/css/main.bc7fa64b.css.map",
-    "main.2bafdb3e.js.map": "/dataguri/static/js/main.2bafdb3e.js.map",
-    "787.03d023e3.chunk.js.map": "/dataguri/static/js/787.03d023e3.chunk.js.map"
+    "main.css": "/DataGuri/static/css/main.bc7fa64b.css",
+    "main.js": "/DataGuri/static/js/main.06a325f7.js",
+    "static/js/787.03d023e3.chunk.js": "/DataGuri/static/js/787.03d023e3.chunk.js",
+    "static/media/map.png": "/DataGuri/static/media/map.480761c1e1cddaa76219.png",
+    "static/media/customer-support (1).svg": "/DataGuri/static/media/customer-support (1).bd878e5f5500a8bb6a7f740346872e41.svg",
+    "static/media/whatsapp.svg": "/DataGuri/static/media/whatsapp.0825a75464cb684560c588f6ebf4a810.svg",
+    "static/media/chatWithUS.svg": "/DataGuri/static/media/chatWithUS.8284a98783487a0be60741d3cb726640.svg",
+    "index.html": "/DataGuri/index.html",
+    "main.bc7fa64b.css.map": "/DataGuri/static/css/main.bc7fa64b.css.map",
+    "main.06a325f7.js.map": "/DataGuri/static/js/main.06a325f7.js.map",
+    "787.03d023e3.chunk.js.map": "/DataGuri/static/js/787.03d023e3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc7fa64b.css",
-    "static/js/main.2bafdb3e.js"
+    "static/js/main.06a325f7.js"
   ]
 }
