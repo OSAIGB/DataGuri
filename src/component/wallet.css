@@ -1,75 +1,48 @@
-
-.wallet-container {
-    width: 350px;
-  
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-  .bank-logo{
-    height: 45px;
-  }
-  
-  .logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    
-  }
-  .wallet-item.title {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    font-size: 20px;
+.bank-logo{
+  color:  #1976d2;
 }
-.copy{
-  cursor: pointer;
-}
-.wallet-item.accountnumber {
-  font-size: 40px;
+.wallet-items-container{
   display: flex;
   flex-direction: row;
-  gap: 10px;
-}
-.wallet-item.bonus{
-  display: flex;
-  gap: 5px;
-}
-.details{
-  position: relative;
-  bottom: -20px;
-  font-weight: 600;
-}
-.name-bonus{
-  display: flex;
+
+  background-color: #fff;
+  
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 
+  0px 1px 1px 0px rgba(0,0,0,0.14), 
+  0px 1px 3px 0px rgba(0,0,0,0.12);
   justify-content: space-between;
-  align-items: center;
-
 }
-.accountName {
+.wallet-item-row.wallet-bg-2 {
+  border-right: none;
+}
+
+.wallet-item-row.wallet-bg-0{
+  border-left: none;
+}
+.wallet-item-row{
+ 
+  border-left: 2px solid #f5f5f5;
+  width: 40%;
+  padding: 20px;
+}
+.accountnumber{
+  font-size: 29px;
+  font-weight: 400;
+ display: flex;
+ gap: 5px;
+}
+.accountName{
   display: flex;
   flex-direction: row;
+  gap: 4px;
+  font-weight: 300;
 }
-
-@media screen and (max-width: 900px) {
-  .wallet-item-row{
-    width: 70%;
-    height: 150px;
-  }
-  .bank-logo{
-    height: 29px;
-  }
-  .wallet-item.accountnumber{
-    font-size: 30px;
-  }
-  .chip{
-    width: 30px;
-  }
-  .name-bonus{
-    font-size: 10px;
+.bonus p{
+font-weight: 300;
+margin: 0;
+}
+@media  screen and (max-width: 900px) {
+  .accountnumber{
+    font-size: 25px;
   }
 }

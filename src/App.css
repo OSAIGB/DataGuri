@@ -1,247 +1,13 @@
 /* LoginPg.css */
-
-
-body, html {
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing: border-box;
 }
-.login {
-    background-color: white; /* White background */
-    color: #2c3e50; /* Complementary color */
-    padding: 88px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
- 
-  
-  .login-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  h1 span {
-    color: #e74c3c; /* Highlight color */
-  }
-  
-  form {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  input[type="checkbox"] {
-    margin-bottom: 0;
-    padding: 0;
-    width: 12px;
+body{
+  background-color: #f5f5f5;
 }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 0.2px solid lightgray;
-    border-radius: 5px;
-  }
-  
-
-    h1 {
-      font-size: 24px;
-      text-align: center;
-    }
-    
-    h1 span {
-      color: #e74c3c; /* Highlight color */
-    }
-    
-  
-    
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    
-
-    
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #e74c3c; /* Highlight color */
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    
-    button:hover {
-      background-color: #c0392b; /* Darker shade on hover */
-    }
-    
-    p {
-      margin-top: 20px;
-    }
-    
-
-  
-  button:hover {
-    background-color: #c0392b; /* Darker shade on hover */
-  }
-  
-  p {
-    margin-top: 20px;
-  }
-  .form{
-    max-width: 400px;
-  }
-  .login-register {
-    background-color: white;
-    /* color: #2c3e50; */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 487px;
-    align-content: center;
-    flex-wrap: nowrap;
-    margin: 0 auto;
-}
-
-
-
-.homepage-view {
-  display: flex;
-  flex-direction: row;
-  margin-left: 275px;
-  padding-top: 68px;
-}
-
-
-
-.wallet-item-row {
-  display: flex;
-  
-}
-.wallet-items-container {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    gap: 17px;
-    width: 100%;
-    overflow: scroll;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding-bottom: 10px;
-}
-.home-display{
-  width: 100%;
-}
-
-.chip{
-  width: 50px;
-}
-/* Define classes for different background colors */
-/* Define dynamic classes for different background colors */
-.wallet-bg-0  {
-  border-radius: 15px;
-background-color: whitesmoke;
-  padding: 20px;
-  width: 350px;
-  height: 200px;
-    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
-}
-.wallet-bg-0 .details{
-  color: rgb(3, 3, 29);
-}
-.wallet-bg-0 .details{
-  color: #2c3e50;
-}
-
-.wallet-bg-1 {
-  width: 350px;
-  height: 200px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
-  background-color: whitesmoke;
-
-}
-.wallet-bg-1 .details{
-  color: #2c3e50;
-}
-
-.wallet-bg-2 {
-  width: 350px;
-  height: 200px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3); 
-  background-color: whitesmoke;
-}
-.wallet-bg-2 .details{
-  color: #2c3e50;
-}
-.wallet-bg-2 .bank-logo{
-  height: 53px;
-}
-.cheap{
-  height: 80px;
-  color: #e74c3c;
-  background-color: whitesmoke;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 5px;
-text-align: center;
-font-size: 26px;
-margin-bottom: 10px;
-}
-/* Add more classes and colors for other indices as needed */
-.catch-transition {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-@media screen and (max-width:900px){
-  .homepage-view{
-    margin-left: 0;
-    padding: 10px;
-    padding-top: 40px;
-  }
-  .login{
-    padding: 27px;
-  }
-  .login-flex form input{
-    width: 93%;
-  }
-  .header{
-    height: 20px;
-  }
-  .cheap-text{
-    font-size: 18px;
-  }
-  .cheap{
-    height: 50px;
-  }
-  input{
-    width: 80%;
-  }
-  .form{
-    padding: 29px;
-  }
-  button{
-    width: 87%;
-  }
-}
-
 .homepage-bars{
   position: fixed;
-  top: 42px;
+  top: 51px;
   font-size: 30px;
   cursor: pointer;
 padding-left: 7px;
@@ -253,4 +19,71 @@ padding-left: 7px;
 
 .homepage-bars.visible {
   transform: translateX(244px);
+}
+
+.home-display {
+  display: grid;
+margin-left:  222px;
+  padding: 30px;
+  padding-top: 70px;
+ grid-template-areas: 
+ 'wallet wallet wallet wallet quick-access'
+ 'invite invite invite invite invite'
+'transactions transactions transactions transactions transactions';
+  gap: 20px; /* Adjust the gap between rows as needed */
+}
+
+.wallet-items-container {
+  grid-area: wallet;
+}
+
+.quick-access-wallet {
+  grid-area: quick-access;
+}
+
+.transactions {
+  grid-area: transactions;
+}
+.invite-div {
+  grid-area: invite;
+}
+@media screen and (max-width: 900px) {
+  .home-display {
+    display: grid;
+    margin-left: 0;
+   grid-template-areas: 
+   
+   'wallet'
+   'quick-access'
+   'invite'
+   'transactions';
+    gap: 4px; /* Adjust the gap between rows as needed */
+  }
+  
+  .wallet-items-container {
+    grid-area: wallet;
+  }
+  
+  .quick-access-wallet {
+    grid-area: quick-access;
+  }
+  
+  .transactions {
+    grid-area: transactions;
+  }
+}
+
+.invite-div h1{
+  color:  #1976d2;
+} 
+.invite-div{
+  padding: 20px;
+  flex-direction: row;
+
+  background-color: #fff;
+  
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 
+  0px 1px 1px 0px rgba(0,0,0,0.14), 
+  0px 1px 3px 0px rgba(0,0,0,0.12);
+  justify-content: space-between;
 }

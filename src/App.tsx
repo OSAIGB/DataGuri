@@ -25,7 +25,6 @@ import EducationPriceList from './component/sidebarlinks/priceLists/educationPri
 import MTNPriceList from './component/sidebarlinks/priceLists/mtnprices';
 import NotFound from './NotFoundPage';
 
-
 const App: React.FC = () => {
   const [myAppIsLoggedIn, setMyAppIsLoggedIn] = useState<boolean>(false);
   console.log(myAppIsLoggedIn);
@@ -101,6 +100,7 @@ const App: React.FC = () => {
     <Route path="/signup" element={<SignInPage />} />
   </Route>
     ))
+    
   return (
     <main>
     <RouterProvider router = {router}/>

@@ -5,7 +5,7 @@ import NotFoundPage from './NotFoundPage'; // Import the custom 404 component
 
 const NotFound = () => {
   return (
-    <div>
+    <div className='not-found-page'>
         <h2 className="not-found">
             Page Not Found
         </h2>

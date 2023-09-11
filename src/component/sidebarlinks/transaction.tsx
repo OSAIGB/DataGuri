@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Transactions: React.FC = () => {
+const DashboardTransactions: React.FC = () => {
   return (
     <div>
       <h1>Transactions</h1>
@@ -62,4 +62,4 @@ const Transactions: React.FC = () => {
   );
 };
 
-export default Transactions;
+export default DashboardTransactions;

@@ -9,14 +9,15 @@ faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CatchDisplay from './component/catchDisplay'
 import QuickAccess from "./component/quickAccess";
-import Transactions from "./component/transactions";
 import Chat from "./component/chat";
 import MoniePointLogo from './moniepoint.png'
 import Chip from './chip.png'
 import Sterling from './sterlingbank.png'
 import Wema from './wema.svg'
 import Map from './map.png'
-import QuickLinks from "./quickLinks";
+
+import Transact from "./component/transactions";
+
 // Define the prop type for the HomePage component
 interface onLogout {
   onLogout: () => void;
@@ -27,7 +28,9 @@ interface transactionTypes {
   amount: number
   response: string
 }
-interface Transaction {
+
+
+interface transactions {
   id: number
   date: number
   amount: number
@@ -58,7 +61,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       accountNumber: 6272075831,
       bankName: 'MoniePoint MFB',
       fundwallet: 'Fund Wallet',
-      bankLogo : MoniePointLogo,
+      bankLogo : 'MoniePoint',
       chip: Chip
     },
     {
@@ -69,7 +72,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       accountNumber: 8984108498,
       bankName: 'Sterling bank',
       fundwallet: 'Fund Wallet',
-      bankLogo : Sterling,
+      bankLogo : 'Sterling Bank',
       chip: Chip
     },
     {
@@ -80,7 +83,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
       accountNumber: 9178609233,
       bankName: 'Wema Bank',
       fundwallet: 'Fund Wallet',
-      bankLogo : Wema,
+      bankLogo : 'Wema Bank',
       chip: Chip
     },
   ];
@@ -111,7 +114,7 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
         <section className="homepage-view"> 
     
        <div className="home-display">
-        <CatchDisplay />
+        
         <div className="wallet-items-container"  >
             {walletBalance.map((walletItem: Wallet, index: number) => (
               <div className={`wallet-item-row wallet-bg-${index}` } key={index} >
@@ -119,14 +122,27 @@ const HomePage: React.FC<onLogout > = ({ onLogout }) => {
               </div> 
             ))}
           </div>
-          <QuickAccess transactions={transactionsList} />
+        <div className="quick-access-wallet">
+          <QuickAccess  />
+          </div> 
           
-        </div> 
-        
+       {/* Additional Content */}
+       
+        <div className="invite-div">
+          <div className="earn"> 
+          <h1>Invite and earn</h1>
+          <p>You will earn N0 on the user's first deposit (capped at N100)</p>
+          <p>Forward your referral code <span>c1dabb</span></p></div>
+
+         <div className="forward-link">
+          <p>Or forward link:</p> <p> <a href="#">https://app.dataguri.com.ng/register?referral=c1dabb</a></p></div> 
+        </div> <div className="transactions">
+   <Transact transactions={transactionsList}/>
+   </div>
+         </div> 
       </section>
      <Chat/>
-     <div className="quick-links-container">
-     <QuickLinks/> </div>
+    
     </div>
   );
 };

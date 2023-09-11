@@ -32,12 +32,11 @@ const WalletBalance: React.FC<WalletBalanceProps> = ({ card }) => {
     <div className="wallet-container" >
     
       <div className="logo">
-        <img src={card.chip} alt="Chip" className="chip" />
-        <img src={card.bankLogo} alt="Bank Logo" className="bank-logo" />
+
+        <h1 className="bank-logo">{card.bankLogo}</h1>
       </div>
       <div className="details">
-      <div className="wallet-item title">{card.title}: 
-      <span className="wallet-item amount">{card.amount}</span></div>
+      </div>
       <div className="background-image"></div>
       <div className="wallet-item accountnumber">{card.accountNumber}
       <FontAwesomeIcon icon={faCopy}  className="copy" onClick={handleCopyClick}/></div>
@@ -45,14 +44,12 @@ const WalletBalance: React.FC<WalletBalanceProps> = ({ card }) => {
       <div className="wallet-item account">
         <div className="accountName"><p>Account Name:</p><p>{card.accountName}</p></div></div>
          <div className="wallet-item bonus"> <p>Bonus Balance:</p>
-      <p>{card.bonus}</p>
       </div>
-    
       </div>
      
       {/* <div className="wallet-item fundwallet">{card.fundwallet}</div> */}
     </div>
-    </div>
+    
   );
 };
 
